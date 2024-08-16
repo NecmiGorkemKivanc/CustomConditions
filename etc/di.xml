@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\CatalogRule\Model\Rule\Condition\Combine">
+        <plugin name="companyname_productlabels_catalogrule_condition_combine" type="CompanyName\ModuleName\Plugin\CatalogRule\Condition\Combine" />
+    </type>
+
+    <type name="Magento\Rule\Model\Condition\Combine">
+        <arguments>
+            <argument name="conditions" xsi:type="array">
+                <item name="vx_discount_condition" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Discount Condition</item>
+                    <item name="value" xsi:type="string">CompanyName\ModuleName\Model\Condition\Combine</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\CatalogRule\Model\Rule\Condition\Product">
+    <arguments>
+        <argument name="data" xsi:type="array">
+            <item name="form_name" xsi:type="string">catalog_rule_form</item>
+        </argument>
+    </arguments>
+    </type>
+
+</config>
